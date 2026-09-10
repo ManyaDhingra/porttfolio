@@ -1016,70 +1016,96 @@
         - #CONTACT
       -->
 
-      <article class="contact" data-page="contact">
+<article class="contact" data-page="contact">
 
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
+  <header>
+    <h2 class="h2 article-title">Contact</h2>
+  </header>
 
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <style>
-              /* Style to set the size of the map */
-              #map {
-                  height: 400px; /* Set the height of the map */
-                  width: 100%; /* Set the width of the map */
-              }
-          </style>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMPFGrXgrVslOMmZZbA5sM6tSMlC1ZNwY&callback=initMap" async defer></script>
-          <script>
-              function initMap() {
-                  // Create a map centered on a specific location
-                  const location = {  lat: 28.6358, lng: 77.1126  }; // Replace with your coordinates
-                  const map = new google.maps.Map(document.getElementById("map"), {
-                      zoom: 8,
-                      center: location,
-                  });
-                  // Add a marker to the map
-                  const marker = new google.maps.Marker({
-                      position: location,
-                      map: map,
-                  });
-              }
-          </script>
-      
-      
-         
-          <div id="map"></div> <!-- Map will be displayed here -->
-      
-          </figure>
-        </section>
 
-        <section class="contact-form">
+  <!-- LOCATION MAP -->
+  <section class="mapbox">
+    <figure>
+      <iframe
+        src="https://www.google.com/maps?q=Bharati%20Vidyapeeth%27s%20College%20of%20Engineering%2C%20New%20Delhi&output=embed"
+        width="100%"
+        height="400"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </figure>
+  </section>
 
-          <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+  <!-- CONTACT FORM -->
+  <section class="contact-form">
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+    <h3 class="h3 form-title">Let's Work Together</h3>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
+    <form action="#" class="form" data-form>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+      <div class="input-wrapper">
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+        <input
+          type="text"
+          name="fullname"
+          class="form-input"
+          placeholder="Your Name"
+          autocomplete="name"
+          required
+          data-form-input
+        >
 
-          </form>
+        <input
+          type="email"
+          name="email"
+          class="form-input"
+          placeholder="Your Email"
+          autocomplete="email"
+          required
+          data-form-input
+        >
 
-        </section>
+      </div>
 
-      </article>
 
+      <input
+        type="text"
+        name="subject"
+        class="form-input"
+        placeholder="Subject"
+        required
+        data-form-input
+      >
+
+
+      <textarea
+        name="message"
+        class="form-input"
+        placeholder="Tell me about your project, idea, or opportunity..."
+        rows="6"
+        required
+        data-form-input
+      ></textarea>
+
+
+      <button
+        class="form-btn"
+        type="submit"
+        disabled
+        data-form-btn
+      >
+        <ion-icon name="paper-plane"></ion-icon>
+        <span>Send Message</span>
+      </button>
+
+    </form>
+
+  </section>
+
+</article>
     </div>
 
   </main>
